@@ -10,8 +10,8 @@ bot = Bot(token="7075765190:AAFZ0UKzWvLLNnJYaq9E-p-ql5kTzMDYs7c")
 updater = Updater(bot=bot, use_context=True)
 dispatcher = updater.dispatcher
 
-spotify_client_id = os.getenv('Client_ID')
-spotify_client_secret = os.getenv('Client_Secret')
+spotify_client_id = "9d4106a443e247008a761cb5840902d1"
+spotify_client_secret = "7fb414cf0a424b66b50e3ad2c411aeb7"
 sp = spotipy.Spotify(auth_manager=SpotifyClientCredentials(client_id=spotify_client_id, client_secret=spotify_client_secret))
 
 BROWSE_OPTIONS = {
