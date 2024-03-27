@@ -1,17 +1,12 @@
 import os
 import requests
-from dotenv import load_dotenv
-from telegram.ext import Updater, CommandHandler, CallbackContext, MessageHandler,filters,CallbackQueryHandler
+from telegram.ext import Updater, CommandHandler, CallbackContext, MessageHandler,Filters,CallbackQueryHandler
 import spotipy
 from spotipy.oauth2 import SpotifyClientCredentials
 import random
 from telegram import InlineKeyboardButton, InlineKeyboardMarkup,Update,Bot
 
-
-load_dotenv()
-
-bot_token = os.getenv('BOT_TOKEN')
-bot = Bot(token=bot_token)
+bot = Bot(token="7075765190:AAFZ0UKzWvLLNnJYaq9E-p-ql5kTzMDYs7c")
 updater = Updater(bot=bot, use_context=True)
 dispatcher = updater.dispatcher
 
@@ -104,7 +99,7 @@ def process_search_query(update: Update, context: CallbackContext):
 
 dispatcher.add_handler(CommandHandler("start", start))
 dispatcher.add_handler(CommandHandler("search", search))
-dispatcher.add_handler(MessageHandler(filters.text & ~filters.command, process_search_query))
+dispatcher.add_handler(MessageHandler(Filters.text & ~Filters.command, process_search_query))
 dispatcher.add_handler(CommandHandler("random", random_track))
 dispatcher.add_handler(CommandHandler("browse", browse))
 dispatcher.add_handler(CallbackQueryHandler(browse_option_callback))
