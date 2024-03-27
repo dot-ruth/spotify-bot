@@ -27,4 +27,4 @@ jobs:
           echo "BOT_TOKEN=7075765190:AAFZ0UKzWvLLNnJYaq9E-p-ql5kTzMDYs7c" >> .env
 
       - name: Run bot
-        run: python bot.py
+        run: python3 bot.py
