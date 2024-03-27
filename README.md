@@ -7,7 +7,6 @@ The Spotify Telegram Bot is a Telegram bot that allows users to search for track
 - Search for tracks by name or artist
 - Get random tracks
 - Browse new releases
-- Connect with your Spotify account
 
 ## Getting Started
 Follow these instructions to set up and run the Spotify Telegram Bot locally.
